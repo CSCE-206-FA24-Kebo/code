@@ -10,7 +10,7 @@
  *****************************************************************************/
 
 #include <stdio.h>
-#include <math.h>
+#include <math.h> // Used by the pow function
 
 // Function prototypes
 void printMenu();
@@ -19,6 +19,7 @@ int subtraction(int number1, int number2);
 int multiplication(int number1, int number2);
 float division(int number1, float number2);
 int power(int base, int exponent);
+int factorial(int number1);
 
 int main() {
     int num1, num2, result;
@@ -72,10 +73,15 @@ int main() {
         printf("%d ^ %d = %d\n", num1, num2, result);
         break;
     case 6:
-        /* code */
+        /* Factorial of one number */
+        printf("Enter on number: ");
+        scanf("%d", &num1);
+        result = factorial(num1);
+        printf("%d! = %d\n", num1, result);
         break;
     case 7:
-        /* code */
+        /* Exit */
+        printf("Exiting ...\n");
         break;
     default:
         /*Default behaviour of all else fails*/
@@ -122,4 +128,14 @@ float division(int number1, float number2){
 // Power using a function from the math library (pow)
 int power(int base, int exponent){
     return pow(base,exponent); 
+}
+
+// Calculate the factorial of a number - (Using recursion)
+int factorial(int number1){
+    // Base case
+    if (number1 == 1)
+        return 1;
+
+    // Recursive case
+    return number1 * factorial(number1-1);
 }
