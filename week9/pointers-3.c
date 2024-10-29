@@ -30,10 +30,3 @@ int main(void)
 
 
 // *p = 12;  // CRASH or SOMETHING PROBABLY BAD. BEST AVOIDED.
-
-str (ea), 12;
-
-
-h = *p;
-
-ld h, (ea)
