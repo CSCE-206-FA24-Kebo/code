@@ -1,0 +1,4 @@
+B	B	B	B	B	B	B	B	B	B	
+x = 32 
+ pi = 3.140000 
+Hello, world!
