@@ -64,8 +64,12 @@ int main() {
     return 0;
 }
 
-// Function to print student grades
+// Function to print student grades to STDOUT
 void printGradeReport(struct Student students[], int student_count) {
+
+    // 1 - Create a file handle - use the mode w
+
+
     // Print header
     printf("\nStudent Grade Report\n");
     printf("----------------------------------------\n");
